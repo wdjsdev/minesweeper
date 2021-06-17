@@ -48,8 +48,6 @@ function draw()
 	stroke(255);
 	showGrid();
 
-	showLegend();
-
 	if(gameIsOver)
 	{
 		noLoop();
@@ -130,10 +128,6 @@ function showGrid()
 	}
 }
 
-function showLegend()
-{
-
-}
 
 function getIndex(x, y)
 {
@@ -288,44 +282,5 @@ function Cell(i, j, w, index)
 			}
 		}
 		this.setFill();
-	}
-}
-
-
-function Legend(n)
-{
-	this.blocks = [];
-
-	for(let i=0;i<n;i++)
-	{
-		this.blocks.push(new Legend_Block(i));
-	}
-
-	this.update() = function()
-	{
-		for(let b=0;b<this.blocks.length;b++)
-		{
-			this.blocks[b].updateFill();
-			this.blocks[b].show();
-		}
-	}
-}
-
-function Legend_Block(index)
-{
-	this.i = index;
-	this.w = cellSize;
-	
-	this.x = this.i * this.w
-	this.y = height - this.w;
-	
-	
-	this.red;
-	this.green;
-	this.blue;
-
-	this.show() = function()
-	{
-		rect
 	}
 }
